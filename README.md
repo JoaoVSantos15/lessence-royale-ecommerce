@@ -1,6 +1,7 @@
 # L'Essence Royale — Plataforma E-commerce de Fragrâncias Importadas
 
 Projeto web desenvolvido durante o curso de **Análise e Desenvolvimento de Sistemas** na **Universidade Mogi das Cruzes (UMC)**. Trata-se de uma aplicação Front-End responsiva voltada à curadoria e comercialização de perfumaria fina (designers internacionais e fragrâncias de nicho árabes), priorizando arquitetura semântica, usabilidade (UI/UX) e manipulação dinâmica de estado no navegador.
+Link do Pages: https://joaovsantos15.github.io/lessence-royale-ecommerce/
 
 ---
 
