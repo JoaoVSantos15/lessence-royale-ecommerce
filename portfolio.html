@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio da Equipe | L'Essence Royale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="topo">
+
+    <header class="cabecalho">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-svg" width="42" height="42" viewBox="0 0 64 64" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="24" y="6" width="16" height="8" rx="2" stroke="#D4AF37" stroke-width="3" />
+                    <rect x="28" y="14" width="8" height="6" fill="#D4AF37" />
+                    <path
+                        d="M16 26C16 22.6863 18.6863 20 22 20H42C45.3137 20 48 22.6863 48 26V50C48 54.4183 44.4183 58 40 58H24C19.5817 58 16 54.4183 16 50V26Z"
+                        stroke="#D4AF37" stroke-width="3" />
+                    <circle cx="32" cy="39" r="7" stroke="#D4AF37" stroke-width="2.5" />
+                </svg>
+                <div class="logo-texto">
+                    <span class="marca-nome">L'ESSENCE</span>
+                    <span class="marca-sub">ROYALE PARFUM</span>
+                </div>
+            </a>
+
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="noticias.html">Notícias & Curiosidades</a></li>
+                    <li><a href="contato.html">Sobre & Contato</a></li>
+                    <li><a href="portfolio.html" class="ativo">Portfólio da Equipe</a></li>
+                </ul>
+            </nav>
+
+            <div class="carrinho-box" onclick="mostrarResumoCarrinho()">
+                🛒 Carrinho: <span id="contador-carrinho">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-gradiente banner-interno">
+        <div class="container">
+            <h1>Portfólio Pessoal dos Desenvolvedores</h1>
+            <p>Conheça a equipe responsável pela arquitetura, design, estilização e desenvolvimento deste projeto.</p>
+        </div>
+    </section>
+
+    <main class="container secao-padrao">
+        <div class="grid-portfolio">
+
+            <!-- RUAN -->
+            <article class="card card-membro">
+                <img src="img/Ruan.jfif" alt="Foto de Ruan" class="foto-perfil">
+                <span class="funcao-badge">HTML & Estrutura</span>
+                <h2>Ruan</h2>
+
+                <h3>Apresentação Profissional</h3>
+                <p>Estudante de Análise e Desenvolvimento de sistemas, atua na área administrativa.</p>
+
+                <h3>Conhecimentos Técnicos & Cursos</h3>
+                <ul class="lista-notas">
+                    <li>Análise e Desenvolvimento de Sistemas</li>
+                    <li>Auxiliar Admnistrativo</li>
+                    <li>Excel</li>
+                </ul>
+
+                <h3>Interesses</h3>
+                <p>Programação, Tecnologia, Futebol, Filmes e Música.</p>
+            </article>
+
+            <!-- HIGOR -->
+            <article class="card card-membro">
+                <img src="img/Higor.jfif" alt="Foto de Higor" class="foto-perfil">
+                <span class="funcao-badge">CSS & Responsividade</span>
+                <h2>Higor</h2>
+
+                <h3>Apresentação Profissional</h3>
+                <p>Estudante de Análise e Desenvolvimento de Sistemas e técnico em administração, atua na área
+                    de suporte de sistemas.
+                </p>
+
+                <h3>Conhecimentos Técnicos & Cursos</h3>
+                <ul class="lista-notas">
+                    <li>Técnico em administração</li>
+                    <li>Análise e Desenvolvimento de Sistemas</li>
+                </ul>
+
+                <h3>Interesses</h3>
+                <p>Power BI, Música e Tecnologia</p>
+            </article>
+
+            <!-- MARCOS -->
+            <article class="card card-membro">
+
+                <img src="img/Marcos.jfif" alt="Foto do Xerife" class="foto-perfil">
+                <span class="funcao-badge">Design & Identidade Visual</span>
+                <h2>Marcos</h2>
+
+                <h3>Apresentação Profissional</h3>
+                <p>Estudante de Análise e Desenvolvimento de Sistemas e Técnico em Eletrotécnica.
+                    Atua entre Eletrotécnica, automação, comandos elétricos e desenvolvimento de software. </p>
+
+                <h3>Conhecimentos Técnicos & Cursos</h3>
+                <ul class="lista-notas">
+                    <li>Técnico em Eletrotécnica</li>
+                    <li>Superior em Análise e Desenvolvimento de Sistemas</li>
+                    <li>Eletricista instalador, Comandos Elétricos e CLP Step 7</li>
+                </ul>
+
+                <h3>Interesses</h3>
+                <p>Análise e Desenvolvimento de Sistemas, Automação Industrial, CLP, Eletrotécnica, Tecnologia e
+                    Desenvolvimento Web.</p>
+            </article>
+
+            <!-- JOÃO VICTOR -->
+            <article class="card card-membro">
+                <img src="img/Joao2.jfif" alt="Foto do João" class="foto-perfil">
+                <span class="funcao-badge">Gestor de Conteúdo & JavaScript</span>
+                <h2>João Victor Silva Santos</h2>
+
+                <h3>Apresentação Profissional</h3>
+                <p>Estudante de Análise e Desenvolvimento de Sistemas e Técnico em Vendas. Atua na interseção entre
+                    tecnologia, desenvolvimento de software, análise e engenharia de dados e visão estratégica de
+                    negócios.</p>
+
+                <h3>Conhecimentos Técnicos & Cursos</h3>
+                <ul class="lista-notas">
+                    <li>Superior em Análise e Desenvolvimento de Sistemas (Cursando) e Técnico em Vendas</li>
+                    <li>Desenvolvimento e Dados: Python, SQL (PostgreSQL, MySQL, SQLite), HTML5, CSS3 e JavaScript</li>
+                    <li>Ferramentas: Power BI, Git/GitHub, Docker, Inglês e IA</li>
+                </ul>
+
+                <h3>Interesses</h3>
+                <p>Engenharia e Análise de Dados, Alta Perfumaria, Musculação, Corrida, Tecnologia,
+                    Hardware, Música e Esportes.</p>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p class="creditos-equipe">Desenvolvido por: Ruan, Higor, Marcos e João</p>
+            <p class="copyright">© 2026 L'Essence Royale Perfumes Importados - Projeto Acadêmico.</p>
+            <a href="#topo" class="link-topo">⬆ Voltar ao Topo</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

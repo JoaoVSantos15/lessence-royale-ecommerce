@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre e Contato | L'Essence Royale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="topo">
+
+    <header class="cabecalho">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-svg" width="42" height="42" viewBox="0 0 64 64" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="24" y="6" width="16" height="8" rx="2" stroke="#D4AF37" stroke-width="3" />
+                    <rect x="28" y="14" width="8" height="6" fill="#D4AF37" />
+                    <path
+                        d="M16 26C16 22.6863 18.6863 20 22 20H42C45.3137 20 48 22.6863 48 26V50C48 54.4183 44.4183 58 40 58H24C19.5817 58 16 54.4183 16 50V26Z"
+                        stroke="#D4AF37" stroke-width="3" />
+                    <circle cx="32" cy="39" r="7" stroke="#D4AF37" stroke-width="2.5" />
+                </svg>
+                <div class="logo-texto">
+                    <span class="marca-nome">L'ESSENCE</span>
+                    <span class="marca-sub">ROYALE PARFUM</span>
+                </div>
+            </a>
+
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="noticias.html">Notícias & Curiosidades</a></li>
+                    <li><a href="contato.html" class="ativo">Sobre & Contato</a></li>
+                    <li><a href="portfolio.html">Portfólio da Equipe</a></li>
+                </ul>
+            </nav>
+
+            <div class="carrinho-box" onclick="mostrarResumoCarrinho()">
+                🛒 Carrinho: <span id="contador-carrinho">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-gradiente banner-interno">
+        <div class="container">
+            <h1>Sobre a L'Essence Royale & Atendimento</h1>
+            <p>Conheça nossa história institucional e fale diretamente com nossos consultores de fragrâncias.</p>
+        </div>
+    </section>
+
+    <main class="container secao-padrao">
+        <div class="grid-contato">
+
+            <!-- Informações Institucionais -->
+            <section class="card info-institucional">
+                <h2>Quem Somos</h2>
+                <p>Fundada em São Paulo, a <strong>L'Essence Royale</strong> nasceu com o propósito de democratizar o
+                    acesso à alta perfumaria mundial no Brasil, reunindo grandes clássicos do design europeu e os
+                    maiores sucessos da perfumaria árabe contemporânea.</p>
+
+                <h3>Nossos Pilares Institucionais</h3>
+                <ul class="lista-notas">
+                    <li><strong>Missão:</strong> Entregar experiências olfativas autênticas com excelência no
+                        atendimento e transparência total de procedência.</li>
+                    <li><strong>Visão:</strong> Ser referência nacional em e-commerce especializado em fragrâncias
+                        importadas.</li>
+                    <li><strong>Valores:</strong> Autenticidade, sofisticação, respeito ao cliente e paixão pela arte da
+                        perfumaria.</li>
+                </ul>
+
+                <h3>Canais de Atendimento</h3>
+                <p><strong>Sede Administrativa:</strong> Av. Paulista, 1000 - São Paulo, SP</p>
+                <p><strong>E-mail:</strong> atendimento@lessenceroyale.com.br</p>
+                <p><strong>Horário:</strong> Segunda a Sexta, das 09h às 18h</p>
+
+            </section>
+
+            <!-- Formulário de Contato com Interação JS -->
+            <section class="card form-container">
+                <h2>Envie uma Mensagem</h2>
+                <p>Tem dúvidas sobre fixação, notas olfativas ou pedidos? Preencha o formulário abaixo:</p>
+
+                <form id="form-contato" onsubmit="enviarFormularioContato(event)">
+                    <div class="campo-form">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto" name="assunto">
+                            <option value="Consultoria Olfativa">Consultoria Olfativa</option>
+                            <option value="Dúvida sobre Produto">Dúvida sobre Produto</option>
+                            <option value="Status de Pedido">Status de Pedido</option>
+                            <option value="Parcerias Comerciais">Parcerias Comerciais</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem detalhada..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primario btn-bloco">Enviar Mensagem</button>
+                </form>
+
+                <!-- Retorno visual do JavaScript -->
+                <div id="feedback-contato" class="feedback-sucesso" style="display: none;"></div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p class="creditos-equipe">Desenvolvido por: Ruan, Higor, Marcos e João</p>
+            <p class="copyright">© 2026 L'Essence Royale Perfumes Importados - Projeto Acadêmico.</p>
+            <a href="#topo" class="link-topo">⬆ Voltar ao Topo</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

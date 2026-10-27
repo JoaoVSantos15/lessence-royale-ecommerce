@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Perfumes | L'Essence Royale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="topo">
+
+    <header class="cabecalho">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-svg" width="42" height="42" viewBox="0 0 64 64" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="24" y="6" width="16" height="8" rx="2" stroke="#D4AF37" stroke-width="3" />
+                    <rect x="28" y="14" width="8" height="6" fill="#D4AF37" />
+                    <path
+                        d="M16 26C16 22.6863 18.6863 20 22 20H42C45.3137 20 48 22.6863 48 26V50C48 54.4183 44.4183 58 40 58H24C19.5817 58 16 54.4183 16 50V26Z"
+                        stroke="#D4AF37" stroke-width="3" />
+                    <circle cx="32" cy="39" r="7" stroke="#D4AF37" stroke-width="2.5" />
+                </svg>
+                <div class="logo-texto">
+                    <span class="marca-nome">L'ESSENCE</span>
+                    <span class="marca-sub">ROYALE PARFUM</span>
+                </div>
+            </a>
+
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html" class="ativo">Catálogo</a></li>
+                    <li><a href="noticias.html">Notícias & Curiosidades</a></li>
+                    <li><a href="contato.html">Sobre & Contato</a></li>
+                    <li><a href="portfolio.html">Portfólio da Equipe</a></li>
+                </ul>
+            </nav>
+
+            <div class="carrinho-box" onclick="mostrarResumoCarrinho()">
+                🛒 Carrinho: <span id="contador-carrinho">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-gradiente banner-interno">
+        <div class="container">
+            <h1>Catálogo de Fragrâncias Importadas</h1>
+            <p>Navegue pelas nossas linhas masculinas e femininas ou filtre pela sua categoria favorita.</p>
+            <!-- Âncora Interna -->
+            <div class="atalhos-ancora">
+                <a href="#masculinos" class="btn-secundario">Ir para Masculinos</a>
+                <a href="#femininos" class="btn-secundario">Ir para Femininos</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container secao-padrao">
+        <!-- Botões de Filtro (João) -->
+        <div class="filtros-catalogo">
+            <button class="btn-filtro ativo" onclick="filtrarCatalogo('todos', this)">Mostrar Todos</button>
+            <button class="btn-filtro" onclick="filtrarCatalogo('masculino', this)">Apenas Masculinos</button>
+            <button class="btn-filtro" onclick="filtrarCatalogo('feminino', this)">Apenas Femininos</button>
+        </div>
+
+        <!-- Seção Masculinos -->
+        <section id="masculinos" class="bloco-categoria" data-categoria="masculino">
+            <h2 class="titulo-secao">Perfumes Masculinos</h2>
+            <div class="grid-cards">
+
+                <article class="card card-produto">
+                    <img src="img/LeauDissey.jpg" alt="Perfume L'Eau d'Issey" class="img-produto">
+                    <div class="card-corpo">
+                        <h3>L'Eau d'Issey Pour Homme (125ml)</h3>
+                        <p class="marca-item">Issey Miyake</p>
+                        <!-- Uso de Lista no Catálogo (Ruan) -->
+                        <ul class="lista-notas">
+                            <li><strong>Topo:</strong> Yuzu, Limão e Bergamota</li>
+                            <li><strong>Coração:</strong> Noz-moscada e Lírio d'Água</li>
+                            <li><strong>Fundo:</strong> Vetiver do Taiti e Sândalo</li>
+                        </ul>
+                        <p class="preco-item">R$ 549,90</p>
+                        <button class="btn-comprar"
+                            onclick="adicionarAoCarrinho('L\'Eau d\'Issey 125ml', 549.90)">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                </article>
+
+                <article class="card card-produto">
+                    <img src="img/fakhar.avif" alt="Perfume Lattafa Fakhar Black" class="img-produto">
+                    <div class="card-corpo">
+                        <h3>Lattafa Fakhar Black (100ml)</h3>
+                        <p class="marca-item">Lattafa Perfumes</p>
+                        <ul class="lista-notas">
+                            <li><strong>Topo:</strong> Maçã Verde, Gengibre e Bergamota</li>
+                            <li><strong>Coração:</strong> Lavanda, Sálvia e Bagas de Zimbro</li>
+                            <li><strong>Fundo:</strong> Fava Tonka, Madeira de Âmbar e Cedro</li>
+                        </ul>
+                        <p class="preco-item">R$ 269,90</p>
+                        <button class="btn-comprar"
+                            onclick="adicionarAoCarrinho('Lattafa Fakhar Black 100ml', 269.90)">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                </article>
+
+                <article class="card card-produto">
+                    <img src="img/BleuDeChanel.webp" alt="Perfume Bleu de Chanel" class="img-produto">
+                    <div class="card-corpo">
+                        <h3>Bleu de Chanel Eau de Parfum (100ml)</h3>
+                        <p class="marca-item">Chanel</p>
+                        <ul class="lista-notas">
+                            <li><strong>Topo:</strong> Toranja, Hortelã e Pimenta Rosa</li>
+                            <li><strong>Coração:</strong> Gengibre, Jasmim e Iso E Super</li>
+                            <li><strong>Fundo:</strong> Incenso, Sândalo da Nova Caledônia e Cedro</li>
+                        </ul>
+                        <p class="preco-item">R$ 920,00</p>
+                        <button class="btn-comprar"
+                            onclick="adicionarAoCarrinho('Bleu de Chanel EDP', 920.00)">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Seção Femininos -->
+        <section id="femininos" class="bloco-categoria" data-categoria="feminino">
+            <h2 class="titulo-secao">Perfumes Femininos</h2>
+            <div class="grid-cards">
+
+                <article class="card card-produto">
+                    <img src="img/Libre.webp" alt="Perfume Libre YSL" class="img-produto">
+                    <div class="card-corpo">
+                        <h3>Libre Eau de Parfum (90ml)</h3>
+                        <p class="marca-item">Yves Saint Laurent</p>
+                        <ul class="lista-notas">
+                            <li><strong>Topo:</strong> Lavanda Francesa e Mandarina</li>
+                            <li><strong>Coração:</strong> Flor de Laranjeira de Marrocos e Jasmim</li>
+                            <li><strong>Fundo:</strong> Baunilha de Madagascar e Âmbar Cinzento</li>
+                        </ul>
+                        <p class="preco-item">R$ 749,00</p>
+                        <button class="btn-comprar"
+                            onclick="adicionarAoCarrinho('YSL Libre EDP 90ml', 749.00)">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+
+                <article class="card card-produto">
+                    <img src="img/Yara.webp" alt="Perfume Yara Lattafa" class="img-produto">
+                    <div class="card-corpo">
+                        <h3>Yara Eau de Parfum (100ml)</h3>
+                        <p class="marca-item">Lattafa Perfumes</p>
+                        <ul class="lista-notas">
+                            <li><strong>Topo:</strong> Orquídea, Heliotrópio e Tangerina</li>
+                            <li><strong>Coração:</strong> Acorde Gourmand e Frutas Tropicais</li>
+                            <li><strong>Fundo:</strong> Baunilha Cremosa, Almíscar e Sândalo</li>
+                        </ul>
+                        <p class="preco-item">R$ 279,90</p>
+                        <button class="btn-comprar"
+                            onclick="adicionarAoCarrinho('Lattafa Yara 100ml', 279.90)">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+
+                <article class="card card-produto">
+                    <img src="img/GoodGirl.webp" alt="Perfume Good Girl" class="img-produto">
+                    <div class="card-corpo">
+                        <h3>Good Girl Eau de Parfum (80ml)</h3>
+                        <p class="marca-item">Carolina Herrera</p>
+                        <ul class="lista-notas">
+                            <li><strong>Topo:</strong> Amêndoa, Café, Bergamota e Limão</li>
+                            <li><strong>Coração:</strong> Tuberosa, Jasmim Sambac e Flor de Laranjeira</li>
+                            <li><strong>Fundo:</strong> Fava Tonka Torrada, Cacau e Pralinê</li>
+                        </ul>
+                        <p class="preco-item">R$ 689,00</p>
+                        <button class="btn-comprar"
+                            onclick="adicionarAoCarrinho('Good Girl EDP 80ml', 689.00)">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p class="creditos-equipe">Desenvolvido por: Ruan, Higor, Marcos e João</p>
+            <p class="copyright">© 2026 L'Essence Royale Perfumes Importados - Projeto Acadêmico.</p>
+            <a href="#topo" class="link-topo">⬆ Voltar ao Topo</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

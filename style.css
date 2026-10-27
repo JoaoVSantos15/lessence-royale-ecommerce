@@ -1,0 +1,539 @@
+/* ==========================================================================
+   PROJETO L'ESSENCE ROYALE - FOLHA DE ESTILO EXTERNA (style.css)
+   Responsáveis: Higor (CSS Grid, Responsividade, Efeitos) e Marcos (Identidade Visual)
+   ========================================================================== */
+
+/* 1. RESET E VARIÁVEIS DE IDENTIDADE VISUAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-escura: #0f1319;
+    --cor-secundaria: #1c222d;
+    --cor-dourado: #d4af37;
+    --cor-dourado-hover: #b59024;
+    --cor-fundo: #f7f5f0;
+    --cor-branca: #ffffff;
+    --cor-texto: #2c2c2c;
+    --cor-suave: #686868;
+    /* Sombreamento */
+    --sombra-card: 0 8px 22px rgba(15, 19, 25, 0.10);
+    --sombra-hover: 0 14px 30px rgba(212, 175, 55, 0.25);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2. Cabeçalho e Menu Principal */
+.cabecalho {
+    background-color: var(--cor-escura);
+    border-bottom: 2px solid var(--cor-dourado);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.marca-nome {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.35rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--cor-dourado);
+}
+
+.marca-sub {
+    font-size: 0.68rem;
+    letter-spacing: 4px;
+    color: var(--cor-branca);
+}
+
+.menu-principal ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-principal a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Hover nos links do menu */
+.menu-principal a:hover,
+.menu-principal a.ativo {
+    background-color: var(--cor-dourado);
+    color: var(--cor-escura);
+}
+
+.carrinho-box {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-dourado);
+    border: 1px solid var(--cor-dourado);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.carrinho-box:hover {
+    background-color: var(--cor-dourado);
+    color: var(--cor-escura);
+    transform: scale(1.05);
+}
+
+/* 3. Banner com Efeito Gradiente */
+.banner-gradiente {
+    background: linear-gradient(135deg, #0f1319 0%, #261e12 55%, #5c4717 100%);
+    color: var(--cor-branca);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.banner-interno {
+    padding: 50px 0;
+}
+
+.banner-gradiente h1 {
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    color: var(--cor-dourado);
+    margin-bottom: 15px;
+    /* Sombreamento no texto */
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.banner-gradiente p {
+    font-size: 1.1rem;
+    max-width: 720px;
+    margin: 0 auto 25px auto;
+    color: #e6e6e6;
+}
+
+.banner-botoes,
+.atalhos-ancora {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* 4. Botões e Efeitos Hover */
+.btn-primario,
+.btn-comprar {
+    background-color: var(--cor-dourado);
+    color: var(--cor-escura);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-primario:hover,
+.btn-comprar:hover {
+    background-color: var(--cor-dourado-hover);
+    color: var(--cor-branca);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--cor-dourado);
+    border: 2px solid var(--cor-dourado);
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secundario:hover {
+    background-color: var(--cor-dourado);
+    color: var(--cor-escura);
+}
+
+/* 5. Seções, Títulos e Grid */
+.secao-padrao {
+    padding: 60px 0;
+}
+
+.titulo-secao {
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--cor-escura);
+    margin-bottom: 10px;
+}
+
+.subtitulo-secao {
+    text-align: center;
+    color: var(--cor-suave);
+    margin-bottom: 40px;
+}
+
+/* Grid nos Produtos */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-bottom: 40px;
+}
+
+/* Grid no Portfólio e Contato */
+.grid-portfolio,
+.grid-contato {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* 6. Cards com SOmbreamento e Formatação de Imagens */
+.card {
+    background-color: var(--cor-branca);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card-produto:hover,
+.card-membro:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+}
+
+.tag-destaque {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--cor-escura);
+    color: var(--cor-dourado);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* Formatação de Imagens */
+.img-produto {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--cor-dourado);
+}
+
+.card-corpo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.marca-item {
+    font-size: 0.85rem;
+    color: var(--cor-suave);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.descricao-item {
+    font-size: 0.92rem;
+    color: #444;
+}
+
+.preco-item {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: var(--cor-escura);
+    margin: 8px 0;
+}
+
+/* 7. Listas e elementos */
+.lista-notas,
+.lista-ordenada-piramide {
+    padding-left: 20px;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.lista-notas li,
+.lista-ordenada-piramide li {
+    margin-bottom: 6px;
+}
+
+.faixa-destaque {
+    background: linear-gradient(90deg, #1c222d, #0f1319);
+    color: var(--cor-branca);
+    padding: 50px 0;
+}
+
+.faixa-destaque .titulo-secao {
+    color: var(--cor-dourado);
+}
+
+.lista-diferenciais {
+    list-style: none;
+    max-width: 750px;
+    margin: 25px auto;
+    font-size: 1.05rem;
+}
+
+.lista-diferenciais li {
+    margin-bottom: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--cor-dourado);
+    border-radius: 4px;
+}
+
+.centro-bloco {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link-externo {
+    color: var(--cor-dourado);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.filtros-catalogo {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    padding: 10px 20px;
+    border: 1px solid var(--cor-escura);
+    background-color: var(--cor-branca);
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-filtro.ativo,
+.btn-filtro:hover {
+    background-color: var(--cor-escura);
+    color: var(--cor-dourado);
+}
+
+/* Artigos de Notícias */
+.artigo-noticia {
+    margin-bottom: 35px;
+    padding: 25px;
+}
+
+.img-artigo {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.artigo-texto h2 {
+    color: var(--cor-escura);
+    margin: 10px 0 15px 0;
+    font-family: Georgia, serif;
+}
+
+.artigo-texto p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.caixa-interativa-js {
+    padding: 30px;
+    text-align: center;
+    border: 2px solid var(--cor-dourado);
+}
+
+.botoes-quiz {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.box-resultado-js {
+    margin-top: 20px;
+    padding: 18px;
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* 8. Portfólio e Formulário de Contato */
+.card-membro {
+    padding: 25px;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cor-dourado);
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.funcao-badge {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--cor-dourado-hover);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.card-membro h3 {
+    font-size: 1rem;
+    color: var(--cor-escura);
+    margin-top: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+
+.card-membro p,
+.card-membro ul {
+    text-align: left;
+    font-size: 0.9rem;
+    margin-top: 6px;
+}
+
+.info-institucional,
+.form-container {
+    padding: 30px;
+}
+
+.campo-form {
+    margin-bottom: 15px;
+}
+
+.campo-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.btn-bloco {
+    width: 100%;
+}
+
+.feedback-sucesso {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* 9. Rodapé */
+.rodape {
+    background-color: var(--cor-escura);
+    color: var(--cor-branca);
+    padding: 30px 0;
+    border-top: 3px solid var(--cor-dourado);
+    text-align: center;
+}
+
+.creditos-equipe {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--cor-dourado);
+    margin-bottom: 8px;
+}
+
+.link-topo {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--cor-dourado);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 10. Responsividade para Celulares e Tablets */
+@media (max-width: 768px) {
+    .header-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-principal ul {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .banner-gradiente h1 {
+        font-size: 1.8rem;
+    }
+}

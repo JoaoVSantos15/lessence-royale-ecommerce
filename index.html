@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Essence Royale | Perfumes Importados</title>
+    <!-- Conexão com o CSS (Higor) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="topo">
+
+    <!-- Cabeçalho e Menu (Ruan - HTML / Marcos - Logo ) -->
+    <header class="cabecalho">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-container" title="Início - L'Essence Royale">
+                <!-- Logo  -->
+                <svg class="logo-svg" width="42" height="42" viewBox="0 0 64 64" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="24" y="6" width="16" height="8" rx="2" stroke="#D4AF37" stroke-width="3" />
+                    <rect x="28" y="14" width="8" height="6" fill="#D4AF37" />
+                    <path
+                        d="M16 26C16 22.6863 18.6863 20 22 20H42C45.3137 20 48 22.6863 48 26V50C48 54.4183 44.4183 58 40 58H24C19.5817 58 16 54.4183 16 50V26Z"
+                        stroke="#D4AF37" stroke-width="3" />
+                    <circle cx="32" cy="39" r="7" stroke="#D4AF37" stroke-width="2.5" />
+                </svg>
+                <div class="logo-texto">
+                    <span class="marca-nome">L'ESSENCE</span>
+                    <span class="marca-sub">ROYALE PARFUM</span>
+                </div>
+            </a>
+
+            <!-- Menu de Navegação -->
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.html" class="ativo">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="noticias.html">Notícias & Curiosidades</a></li>
+                    <li><a href="contato.html">Sobre & Contato</a></li>
+                    <li><a href="portfolio.html">Portfólio da Equipe</a></li>
+                </ul>
+            </nav>
+
+            <!-- JS: Contador do Carrinho (João) -->
+            <div class="carrinho-box" onclick="mostrarResumoCarrinho()">
+                🛒 Carrinho: <span id="contador-carrinho">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner com efeito (Higor / João) -->
+    <section id="banner-hero" class="banner-gradiente">
+        <div class="container banner-conteudo">
+            <h1>A Arte da Alta Perfumaria Mundial</h1>
+            <p>Descubra fragrâncias importadas autênticas que traduzem elegância, presença e personalidade em cada nota
+                olfativa.</p>
+            <div class="banner-botoes">
+                <!-- Âncora para a seção de destaques -->
+                <a href="#destaques" class="btn-primario">Ver Destaques</a>
+                <!-- Link entre páginas -->
+                <a href="catalogo.html" class="btn-secundario">Catálogo Completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vitrine de destaques (Ruan / Higor) -->
+    <main class="container secao-padrao" id="destaques">
+        <h2 class="titulo-secao">Fragrâncias em Destaque</h2>
+        <p class="subtitulo-secao">Os perfumes mais desejados da nossa curadoria internacional.</p>
+
+        <div class="grid-cards">
+            <!-- Card do Produto 1 -->
+            <article class="card card-produto">
+                <span class="tag-destaque">Mais Vendido</span>
+                <img src="img/LeauDissey.jpg" alt="Frasco do perfume L'Eau d'Issey Pour Homme" class="img-produto">
+                <div class="card-corpo">
+                    <h3>L'Eau d'Issey Pour Homme</h3>
+                    <p class="marca-item">Issey Miyake • Eau de Toilette</p>
+                    <p class="descricao-item">Frescor aquático amadeirado com notas marcantes de Yuzu japonês,
+                        noz-moscada e sândalo.</p>
+                    <p class="preco-item">R$ 549,90</p>
+                    <button class="btn-comprar"
+                        onclick="adicionarAoCarrinho('L\'Eau d\'Issey Pour Homme', 549.90)">Adicionar ao
+                        Carrinho</button>
+                </div>
+            </article>
+
+            <!-- Card Produto 2 -->
+            <article class="card card-produto">
+                <span class="tag-destaque">Perfumaria Árabe</span>
+                <img src="img/AsadEDP.jpeg" alt="Frasco do perfume Lattafa Asad" class="img-produto">
+                <div class="card-corpo">
+                    <h3>Asad Eau de Parfum</h3>
+                    <p class="marca-item">Lattafa Perfumes • Oriental Especiado</p>
+                    <p class="descricao-item">Projeção intensa com notas de pimenta preta, tabaco, café, baunilha e
+                        âmbar seco.</p>
+                    <p class="preco-item">R$ 289,90</p>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Lattafa Asad EDP', 289.90)">Adicionar ao
+                        Carrinho</button>
+                </div>
+            </article>
+
+            <!-- Card Produto 3 -->
+            <article class="card card-produto">
+                <span class="tag-destaque">Clássico Francês</span>
+                <img src="img/ChanelN5.avif" alt="Frasco do perfume Chanel Nº 5" class="img-produto">
+                <div class="card-corpo">
+                    <h3>Chanel N° 5 Eau de Parfum</h3>
+                    <p class="marca-item">Chanel • Floral Aldeídico</p>
+                    <p class="descricao-item">O ícone atemporal da perfumaria feminina com acordes de jasmim de Grasse,
+                        rosa e baunilha.</p>
+                    <p class="preco-item">R$ 980,00</p>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Chanel N° 5 EDP', 980.00)">Adicionar ao
+                        Carrinho</button>
+                </div>
+            </article>
+
+            <!-- Card Produto 4 -->
+            <article class="card card-produto">
+                <span class="tag-destaque">Alta Fixação</span>
+                <img src="img/SauvageEDP.jpg" alt="Frasco do perfume Sauvage" class="img-produto">
+                <div class="card-corpo">
+                    <h3>Sauvage Eau de Parfum</h3>
+                    <p class="marca-item">Dior • Aromático Fougère</p>
+                    <p class="descricao-item">Equilíbrio sofisticado entre a bergamota suculenta da Calábria e o rastro
+                        amadeirado de ambroxan.</p>
+                    <p class="preco-item">R$ 799,00</p>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Dior Sauvage EDP', 799.00)">Adicionar ao
+                        Carrinho</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Seção dos Diferenciais (Ruan / João) -->
+    <section class="faixa-destaque">
+        <div class="container">
+            <h2 class="titulo-secao">Por que escolher a L'Essence Royale?</h2>
+            <ul class="lista-diferenciais">
+                <li>✔ <strong>100% Originais:</strong> Importação oficial com selo de autenticidade ADIPEC.</li>
+                <li>✔ <strong>Curadoria Especializada:</strong> Fragrâncias de designer, nicho e perfumaria árabe.</li>
+                <li>✔ <strong>Envio Seguro:</strong> Embalagens térmicas e protegidas para preservar as notas olfativas.
+                </li>
+            </ul>
+            <div class="centro-bloco">
+                <!-- Link Externo -->
+                <a href="https://www.fragrantica.com.br/" target="_blank" rel="noopener noreferrer"
+                    class="link-externo">
+                    🔗 Consulte avaliações globais na enciclopédia Fragrantica (Link Externo)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p class="creditos-equipe">Desenvolvido por: Ruan, Higor, Marcos, João</p>
+            <p class="copyright">© 2026 L'Essence Royale Perfumes Importados - Projeto Acadêmico.</p>
+            <!-- Âncora para voltar para o topo -->
+            <a href="#topo" class="link-topo">⬆ Voltar ao Topo</a>
+        </div>
+    </footer>
+
+    <!-- Conexão com o JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

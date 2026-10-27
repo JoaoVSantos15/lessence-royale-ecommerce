@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias e Curiosidades | L'Essence Royale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="topo">
+
+    <header class="cabecalho">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-svg" width="42" height="42" viewBox="0 0 64 64" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="24" y="6" width="16" height="8" rx="2" stroke="#D4AF37" stroke-width="3" />
+                    <rect x="28" y="14" width="8" height="6" fill="#D4AF37" />
+                    <path
+                        d="M16 26C16 22.6863 18.6863 20 22 20H42C45.3137 20 48 22.6863 48 26V50C48 54.4183 44.4183 58 40 58H24C19.5817 58 16 54.4183 16 50V26Z"
+                        stroke="#D4AF37" stroke-width="3" />
+                    <circle cx="32" cy="39" r="7" stroke="#D4AF37" stroke-width="2.5" />
+                </svg>
+                <div class="logo-texto">
+                    <span class="marca-nome">L'ESSENCE</span>
+                    <span class="marca-sub">ROYALE PARFUM</span>
+                </div>
+            </a>
+
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="noticias.html" class="ativo">Notícias & Curiosidades</a></li>
+                    <li><a href="contato.html">Sobre & Contato</a></li>
+                    <li><a href="portfolio.html">Portfólio da Equipe</a></li>
+                </ul>
+            </nav>
+
+            <div class="carrinho-box" onclick="mostrarResumoCarrinho()">
+                🛒 Carrinho: <span id="contador-carrinho">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-gradiente banner-interno">
+        <div class="container">
+            <h1>Universo da Perfumaria: Notícias & Curiosidades</h1>
+            <p>Artigos técnicos, história das fragrâncias e guia de pirâmides olfativas.</p>
+            <div class="atalhos-ancora">
+                <a href="#historia" class="btn-secundario">História dos Perfumes</a>
+                <a href="#piramide" class="btn-secundario">Pirâmide Olfativa</a>
+                <a href="#quiz-olfativo" class="btn-secundario">Descubra seu Perfume</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container secao-padrao">
+
+        <!-- Artigo 1: História da Perfumaria -->
+        <article id="historia" class="card artigo-noticia">
+            <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=900&q=80"
+                alt="Bancada com essências e frascos de perfume" class="img-artigo">
+            <div class="artigo-texto">
+                <span class="tag-destaque">História & Cultura</span>
+                <h2>Das Civilizações Antigas à Revolução da Perfumaria Árabe e Francesa</h2>
+                <p>A palavra <strong>perfume</strong> deriva do latim <em>"per fumum"</em>, que significa "através da
+                    fumaça". No Antigo Egito e na Mesopotâmia, resinas nobres como mirra, olíbano e madeiras aromáticas
+                    eram queimadas em rituais e transformadas em unguentos reais.</p>
+                <p>Durante a Idade Média, químicos e estudiosos do mundo árabe — como Avicena (Ibn Sina) — aperfeiçoaram
+                    o processo de destilação a vapor de pétalas de rosas, dando origem às águas perfumadas concentradas.
+                    Mais tarde, no século XVIII, a cidade de <strong>Grasse, na França</strong>, consolidou-se como a
+                    capital mundial da perfumaria moderna. Hoje, vemos um forte renascimento da perfumaria do Oriente
+                    Médio (como a casa <em>Lattafa</em>), famosa pela alta concentração de óleos essenciais, especiarias
+                    exóticas e madeiras nobres como o Oud.</p>
+                <a href="https://pt.wikipedia.org/wiki/Perfume" target="_blank" rel="noopener noreferrer"
+                    class="link-externo">📖 Ler mais sobre a história da perfumaria na Wikipédia</a>
+            </div>
+        </article>
+
+        <!-- Artigo 2: Pirâmide Olfativa e Concentrações -->
+        <article id="piramide" class="card artigo-noticia">
+            <div class="artigo-texto">
+                <span class="tag-destaque">Guia Técnico</span>
+                <h2>Como Funciona a Pirâmide Olfativa e a Fixação na Pele?</h2>
+                <p>Um perfume importado não possui o mesmo cheiro do início ao fim. Ele é construído em camadas de
+                    volatilidade chamadas de <strong>Pirâmide Olfativa</strong>, que evaporam gradualmente em contato
+                    com o calor do corpo:</p>
+
+                <!-- Lista Ordenada exigida nas instruções -->
+                <ol class="lista-ordenada-piramide">
+                    <li><strong>Notas de Topo (Saída):</strong> São as primeiras moléculas sentidas logo após a
+                        borrifada. Duram de 15 a 30 minutos e geralmente trazem acordes cítricos e frescos (como Yuzu,
+                        Bergamota, Limão Siciliano e Lavanda).</li>
+                    <li><strong>Notas de Coração (Corpo):</strong> Surgem quando a saída evapora, definindo a
+                        personalidade central da fragrância. Duram de 3 a 5 horas e reúnem notas florais, especiadas e
+                        aromáticas (Noz-moscada, Jasmim, Gerânio e Canela).</li>
+                    <li><strong>Notas de Fundo (Base):</strong> São moléculas densas e pesadas que fixam o perfume na
+                        pele por 8 a 12 horas ou mais. Incluem Sândalo, Cedro, Baunilha, Âmbar, Almíscar e Fava Tonka.
+                    </li>
+                </ol>
+
+                <h3>Diferença entre EDT, EDP e Parfum:</h3>
+                <ul class="lista-notas">
+                    <li><strong>Eau de Toilette (EDT):</strong> Concentração de 8% a 12% de essência — ideal para dias
+                        quentes, trabalho e academia (ex: <em>L'Eau d'Issey</em>).</li>
+                    <li><strong>Eau de Parfum (EDP):</strong> Concentração de 15% a 20% de essência — excelente
+                        equilíbrio entre projeção e longa fixação (ex: <em>Lattafa Asad</em> e <em>Dior Sauvage
+                            EDP</em>).</li>
+                    <li><strong>Parfum / Extrait:</strong> Concentração acima de 20% — altíssima intensidade e duração
+                        superior a 12 horas.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Interação com JavaScript: Consultor Olfativo (João) -->
+        <section id="quiz-olfativo" class="card caixa-interativa-js">
+            <h2>Consultor Olfativo Interativo</h2>
+            <p>Escolha a ocasião em que você mais pretende usar o perfume e descubra nossa recomendação ideal:</p>
+            <div class="botoes-quiz">
+                <button class="btn-primario" onclick="recomendarPerfume('dia')">☀ Dia a Dia, Trabalho ou Calor</button>
+                <button class="btn-primario" onclick="recomendarPerfume('noite')">🌙 Encontros Noturnos e Clima
+                    Frio</button>
+                <button class="btn-primario" onclick="recomendarPerfume('elegante')">👔 Eventos Formais e
+                    Assinatura</button>
+            </div>
+            <div id="resultado-recomendacao" class="box-resultado-js">
+                Clique em uma das opções acima para ver a sugestão do nosso especialista.
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p class="creditos-equipe">Desenvolvido por: Ruan, Higor, Marcos e João</p>
+            <p class="copyright">© 2026 L'Essence Royale Perfumes Importados - Projeto Acadêmico.</p>
+            <a href="#topo" class="link-topo">⬆ Voltar ao Topo</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
